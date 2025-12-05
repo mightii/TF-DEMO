@@ -24,7 +24,7 @@ resource "aws_s3_bucket_public_access_block" "demo_block" {
 }
 
 resource "aws_s3_object" "demo_message" {
-  bucket  = aws_s3_bucket.demo.id
+  bucket  = aws_s3_bucket.demo_bucket.id
   key     = "message.txt"
   content = var.demo_message
   # This makes sure Terraform detects changes to content reliably
