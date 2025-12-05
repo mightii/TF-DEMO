@@ -23,6 +23,14 @@ resource "aws_s3_bucket_public_access_block" "demo_block" {
   restrict_public_buckets = true
 }
 
+resource "aws_s3_object" "demo_message" {
+  bucket  = aws_s3_bucket.demo.id
+  key     = "message.txt"
+  content = var.demo_message
+  # This makes sure Terraform detects changes to content reliably
+  etag = md5(var.demo_message)
+}
+
 output "bucket_id" {
   value = aws_s3_bucket.demo_bucket.id
 }

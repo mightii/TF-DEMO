@@ -1,8 +1,8 @@
 terraform {
   cloud {
-    organization = "acme-cloud20"         # Mets le nom de ton org TFC
+    organization = "acme-cloud20" # Mets le nom de ton org TFC
     workspaces {
-      name = "acme-website-dev"           # Le workspace que tu vas utiliser
+      name = "acme-website-dev" # Le workspace que tu vas utiliser
     }
   }
 
