@@ -22,4 +22,6 @@ module "demo_s3" {
   source      = "./modules/s3-website"
   bucket_name = var.bucket_name
   aws_region  = var.aws_region
+  demo_message = "a new message!"
 }
+
