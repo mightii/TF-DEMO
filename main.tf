@@ -23,5 +23,5 @@ module "demo_s3" {
   bucket_name = var.bucket_name
   aws_region  = var.aws_region
   demo_message = "a new message!"
+  policy_demo_tag = var.policy_demo_tag
 }
-
